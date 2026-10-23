@@ -10,7 +10,11 @@ CREATE TABLE perfil_estudante (
 
 SELECT * FROM perfil_estudante
 
-INSERT INTO perfil_estudante (id_perfil) values ('casual', 'formal', 'academico') ;
+INSERT INTO perfil_estudante (id_usuario, idioma_nativo, idioma_estudo, estilo_vocabulario) 
+values (1, 'pt BR', 'en US', 'casual'),(2, 'pt BR', 'es ES', 'formal'),(3, 'en US', 'fr FR', 'academico');
+
+INSERT INTO perfil_estudante (id_usuario, idioma_nativo, idioma_estudo, estilo_vocabulario, modulos_concluidos_acumulados, nivel_fluencia_atual) 
+values (4, 'pt BR', 'en US', 'negocios', 5, 'B1'),(5, 'es ES', 'en GB', 'tecnico', 12, 'C1'),(6, 'fr FR', 'it IT', 'conversacao', 0, 'A1');
 
 
 CREATE TABLE assinatura_vip (
