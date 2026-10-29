@@ -55,3 +55,29 @@ INSERT INTO escola (nome_instituicao, cnpj, email_contato) VALUES ('consolata', 
 INSERT INTO escola (nome_instituicao, cnpj, email_contato) VALUES ('consolata', '123.345.566', 'cr7.consolata@gmail.com');
 
 INSERT INTO escola (nome_instituicao, cnpj, email_contato) VALUES ('consolata', '098.45.56', 'messi.consolata@gmail.com');
+
+
+CREATE TABLE usuario (
+  id_usuario SERIAL PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL ,
+  senha_hash VARCHAR(255) NOT NULL,
+  data_nascimento DATE NOT NULL,
+  faixa_etaria VARCHAR(255) NOT NULL,
+  tipo_perfil  VARCHAR(255) NOT NULL,
+  fk_turma INT,
+  data_cadastro TIMESTAMP,
+  constraint fk_turma foreign key (fk_turma) references turma (id_turma)
+
+);
+
+SELECT * FROM usuario;
+
+INSERT INTO usuario (nome, email, senha_hash, data_nascimento, faixa_etaria, tipo_perfil, fk_turma, data_cadastro) values ('ja', 'j@gmail.com', '12', '2011/05/14', '15', 'es',1, '2026/01/01');
+
+INSERT INTO usuario (nome, email, senha_hash, data_nascimento, faixa_etaria, tipo_perfil, fk_turma, data_cadastro) values ('jat', 'jat@gmail.com', '13', '2011/05/14', '15', 'es',1, '2026/01/01');
+
+INSERT INTO usuario (nome, email, senha_hash, data_nascimento, faixa_etaria, tipo_perfil, fk_turma, data_cadastro) values ('jati', 'jati@gmail.com', '14', '2011/05/14', '15', 'es',2, '2026/01/01');
+
+drop table usuario
+
