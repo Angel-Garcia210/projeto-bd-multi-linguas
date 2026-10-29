@@ -37,3 +37,21 @@ VALUES (1, 'gold', 'Acesso liberado');
 
 INSERT INTO assinatura_vip (id_usuario, tipo_plano, status) 
 VALUES (2, 'bronze', 'Subindo de nível');
+
+
+CREATE TABLE escola(
+  id_escola SERIAL PRIMARY KEY,
+  nome_instituicao varchar(150) not null,
+  cnpj             varchar(18),
+  email_contato    varchar(100) not null,
+  data_cadastro    timestamp
+
+);
+
+SELECT * FROM escola;
+
+INSERT INTO escola (nome_instituicao, cnpj, email_contato) VALUES ('consolata', '123.345.56', 'escola.consolata@gmail.com');
+
+INSERT INTO escola (nome_instituicao, cnpj, email_contato) VALUES ('consolata', '123.345.566', 'cr7.consolata@gmail.com');
+
+INSERT INTO escola (nome_instituicao, cnpj, email_contato) VALUES ('consolata', '098.45.56', 'messi.consolata@gmail.com');
