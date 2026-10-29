@@ -144,3 +144,17 @@ drop TABLE professor
 drop TABLE pessoa
 drop TABLE turma
 
+
+
+create table sala_chat (
+ id_sala INT generated always as identity primary key,
+ id_usuario_1 INT not null,
+ id_usuario_2 INT not null,
+ autorizado_por_responsavel boolean,
+ data_criacao timestamp
+);
+SELECT * FROM sala_chat;
+
+INSERT INTO sala_chat (usuario_1, id_usuario_2, autorizado_por_responsavel, data_criacao) values ('1', '2', )
+INSERT INTO sala_chat (usuario_1, id_usuario_2, autorizado_por_responsavel, data_criacao) values ('3', '4', )
+INSERT INTO sala_chat (usuario_1, id_usuario_2, autorizado_por_responsavel, data_criacao) values ('30', '31', )
