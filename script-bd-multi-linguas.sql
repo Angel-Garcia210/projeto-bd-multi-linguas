@@ -81,3 +81,22 @@ INSERT INTO usuario (nome, email, senha_hash, data_nascimento, faixa_etaria, tip
 
 drop table usuario
 
+
+
+CREATE TABLE recomendacao_vocabulario(
+  id_recomendacao SERIAL PRIMARY KEY,
+  fk_usuario int NOT NULL,
+  palavra_expressao varchar(100) NOT NULL,
+  traducao varchar(100) NOT NULL,
+  frequencia_uso int,
+  sugeriada_por_nlp boolean,
+  data_ultima_ocorrencia timestamp, 
+  constraint fk_usuario foreign key (fk_usuario)references usuario (id_usuario)
+
+);
+SELECT * FROM recomendacao_vocabulario;
+INSERT INTO recomendacao_vocabulario(fk_usuario, palavra_expressao, traducao) values (2,'TEXTO','MAIS TEXTO');
+
+INSERT INTO recomendacao_vocabulario(fk_usuario, palavra_expressao, traducao) values (3,'TEXTO','MAIS TEXTO');
+
+INSERT INTO recomendacao_vocabulario(fk_usuario, palavra_expressao, traducao) values (1,'TEXTO','MAIS TEXTO');
