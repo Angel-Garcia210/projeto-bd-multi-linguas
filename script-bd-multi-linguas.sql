@@ -122,3 +122,25 @@ INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorret
 INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorreta) VALUES (1,'texo','ms texo')
 
 drop table reporte_falha_traducao
+
+
+
+CREATE TABLE turma (
+  id_turma SERIAL PRIMARY KEY,
+  fk_escola    int          NOT NULL,
+  nome_turma   varchar(100) NOT NULL,
+  ano_letivo   int          NOT NULL,
+  constraint fk_escola foreign key (fk_escola)references escola (id_escola)
+
+);
+SELECT * FROM turma;
+INSERT INTO turma(fk_escola, nome_turma, ano_letivo) VALUES (1,'escola','1123456');
+
+INSERT INTO turma(fk_escola, nome_turma, ano_letivo) VALUES (2,'escola','123456739');
+
+INSERT INTO turma(fk_escola, nome_turma, ano_letivo) VALUES (2,'escola','181234');
+
+drop TABLE professor
+drop TABLE pessoa
+drop TABLE turma
+
