@@ -28,7 +28,6 @@ CREATE TABLE assinatura_vip (
   data_expiracao TIMESTAMP
 );
 
-drop table assinatura_vip;
 
 SELECT * FROM assinatura_vip
 
