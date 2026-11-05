@@ -178,7 +178,6 @@ CREATE TABLE assinatura_vip (
 
 );
 
-drop table assinatura_vip;
 
 SELECT * FROM assinatura_vip
 
